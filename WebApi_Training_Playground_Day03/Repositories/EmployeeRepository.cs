@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using WebApi_Training_Playground_Day02.Data;
 using WebApi_Training_Playground_Day02.Models;
 
 namespace WebApi_Training_Playground_Day02.Repositories

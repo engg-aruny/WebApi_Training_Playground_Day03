@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.EnterpriseServices;
 using System.Web.Http;
+using WebApi_Training_Playground_Day02.Data;
 using WebApi_Training_Playground_Day02.Models;
 using WebApi_Training_Playground_Day02.Repositories;
 
