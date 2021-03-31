@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
-using WebApi_Training_Playground_Day02.Models;
+using WebApi_Training_Playground_Day03.Models;
 
-namespace WebApi_Training_Playground_Day02.Data
+namespace WebApi_Training_Playground_Day03.Data
 {
 	public class WebApiTrainingDbContext : DbContext
 	{

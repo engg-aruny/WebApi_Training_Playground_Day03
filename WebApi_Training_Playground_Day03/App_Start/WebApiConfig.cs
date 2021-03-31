@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
 
-namespace WebApi_Training_Playground_Day02
+namespace WebApi_Training_Playground_Day03
 {
     public static class WebApiConfig
     {

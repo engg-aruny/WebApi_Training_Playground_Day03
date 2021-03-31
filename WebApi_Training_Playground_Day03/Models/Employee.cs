@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace WebApi_Training_Playground_Day02.Models
+namespace WebApi_Training_Playground_Day03.Models
 {
 	[Table("Employees")]
     public class Employee
