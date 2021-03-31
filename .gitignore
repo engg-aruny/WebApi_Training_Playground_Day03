@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/WebApi_Training_Playground_Day03/v16/.suo
+/.vs/WebApi_Training_Playground_Day03/v16
+/.vs/WebApi_Training_Playground/v16/.suo
+/.vs/WebApi_Training_Playground/v16
+/.vs/VSWorkspaceState.json
+/.vs/slnx.sqlite
+/.vs/ProjectSettings.json
+/WebApi_Training_Playground_Day03/bin
+*.config
+/WebApi_Training_Playground_Day03/obj/Debug
