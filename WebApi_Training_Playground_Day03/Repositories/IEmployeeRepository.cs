@@ -13,6 +13,6 @@ namespace WebApi_Training_Playground_Day03.Repositories
 
 		Employee UpdateEmployee(Employee employee);
 
-		void DeleteEmployee(int employeeId);
+		bool DeleteEmployee(int employeeId);
 	}
 }

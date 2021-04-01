@@ -50,14 +50,17 @@ namespace WebApi_Training_Playground_Day03.Repositories
 			return null;
 		}
 
-		public void DeleteEmployee(int employeeId)
+		public bool DeleteEmployee(int employeeId)
 		{
 			var result = _context.Employees.FirstOrDefault(e => e.Id == employeeId);
 			if (result != null)
 			{
 				_context.Employees.Remove(result);
 				_context.SaveChanges();
+				return true;
 			}
+
+			return false;
 		}
 	}
 }
