@@ -16,6 +16,8 @@ namespace WebApi_Training_Playground_Day03.Models
 
 	    public DateTime HireDate { get; set; }
 
+	    public string EmployeeNumber { get; set; }
+
 		public int DepartmentId { get; set; }
 
 		[ForeignKey(nameof(DepartmentId))]

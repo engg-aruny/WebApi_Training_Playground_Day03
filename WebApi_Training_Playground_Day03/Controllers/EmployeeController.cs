@@ -65,7 +65,7 @@ namespace WebApi_Training_Playground_Day03.Controllers
 			return Ok(employee);
 		}
 
-		public IHttpActionResult AddEmployee(Employee employee)
+		public IHttpActionResult PostEmployee([FromBody]Employee employee)
 		{
 			if (!ModelState.IsValid)
 				return BadRequest("Invalid data.");
@@ -75,7 +75,7 @@ namespace WebApi_Training_Playground_Day03.Controllers
 			return Ok(employee);
 		}
 
-		public IHttpActionResult UpdateEmployee(Employee employee)
+		public IHttpActionResult PutEmployee(Employee employee)
 		{
 			if (!ModelState.IsValid)
 				return BadRequest("Invalid data.");

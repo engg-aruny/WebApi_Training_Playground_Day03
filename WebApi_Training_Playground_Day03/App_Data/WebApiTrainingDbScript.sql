@@ -95,11 +95,11 @@ BEGIN
 	IF NOT EXISTS (SELECT 1 FROM [Employees] WHERE [EmployeeNumber] = 'EP003')
 	BEGIN
 		INSERT INTO [Employees] ([FirstName], [LastName], [EmployeeNumber], [HireDate], [DepartmentId]) 
-			VALUES ('Rohit', 'Kumar','EP003', '04-22-2020' ,1);
+			VALUES ('Rohit', 'Kumar','EP003', '04-22-2020' ,2);
 	END
 	IF NOT EXISTS (SELECT 1 FROM [Employees] WHERE [EmployeeNumber] = 'EP004')
 	BEGIN
 		INSERT INTO [Employees] ([FirstName], [LastName],[EmployeeNumber], [HireDate], [DepartmentId]) 
-			VALUES ('Mukund', 'Kumar', 'EP004','05-20-2020' ,1);
+			VALUES ('Mukund', 'Kumar', 'EP004','05-20-2020' ,3);
 	END
 END
