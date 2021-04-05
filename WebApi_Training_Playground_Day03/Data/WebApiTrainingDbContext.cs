@@ -13,5 +13,7 @@ namespace WebApi_Training_Playground_Day03.Data
 		public DbSet<Employee> Employees { get; set; }
 
 		public DbSet<Department> Departments { get; set; }
+
+		public DbSet<UserMaster> UserMasters { get; set; }
 	}
 }

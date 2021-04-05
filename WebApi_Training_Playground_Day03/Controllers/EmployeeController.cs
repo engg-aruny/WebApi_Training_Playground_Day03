@@ -12,12 +12,11 @@ namespace WebApi_Training_Playground_Day03.Controllers
 	{
 		private readonly IEmployeeRepository _employeeRepository;
 
-		private readonly IDepartmentRepository _departmentRepository;
+	
 
 		public EmployeeController()
 		{
 			this._employeeRepository = new EmployeeRepository(new WebApiTrainingDbContext());
-			this._departmentRepository = new DepartmentRepository(new WebApiTrainingDbContext());
 		}
 
 		// GET: Employee
@@ -35,21 +34,7 @@ namespace WebApi_Training_Playground_Day03.Controllers
 			return Ok(employees);
 		}
 
-		//Enable For Error : multiple action methods with same number of parameters 
-		/*
-		public IHttpActionResult GetDepartments()
-		{
-			IEnumerable<Department> departments = null;
-
-			departments = this._departmentRepository.GetDepartments().ToList();
-
-			if (!departments.Any())
-			{
-				return NotFound();
-			}
-
-			return Ok(departments);
-		}*/
+		
 
 		// GET: Employee
 		public IHttpActionResult GetEmployee(int id)

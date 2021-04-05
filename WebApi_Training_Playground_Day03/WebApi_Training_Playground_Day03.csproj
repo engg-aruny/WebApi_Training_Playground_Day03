@@ -50,9 +50,30 @@
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.1.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Cors.4.1.1\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.1.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.1.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.1.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Cors, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.0.0\lib\net45\System.Web.Cors.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -83,12 +104,44 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\WebApiTrainingDbScript.sql" />
+    <Content Include="AddEmployee.html" />
+    <Content Include="App_Data\02-UserMasterScript.sql" />
+    <Content Include="App_Data\01-WebApiTrainingDbScript.sql" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap-grid.css" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap-grid.min.css" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap-grid.rtl.css" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap-reboot.css" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap-reboot.min.css" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap-reboot.rtl.css" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap-utilities.css" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap-utilities.min.css" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap-utilities.rtl.css" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap.css" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap.min.css" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap.rtl.css" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap.rtl.min.css" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\js\bootstrap.bundle.js" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\js\bootstrap.bundle.min.js" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\js\bootstrap.esm.js" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\js\bootstrap.esm.min.js" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\js\bootstrap.js" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\js\bootstrap.min.js" />
+    <Content Include="DeleteEmployee.html" />
+    <Content Include="EmployeeList.html" />
     <Content Include="Global.asax" />
+    <Content Include="Home.html" />
+    <Content Include="jquery-3.6.0.js" />
+    <Content Include="UpdateEmployee.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Auth\AuthenticationProvider.cs" />
+    <Compile Include="Controllers\AuthTestController.cs" />
+    <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
@@ -98,13 +151,36 @@
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Data\WebApiTrainingDbContext.cs" />
+    <Compile Include="Models\UserMaster.cs" />
+    <Compile Include="OwinStartup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\DepartmentRepository.cs" />
     <Compile Include="Repositories\EmployeeRepository.cs" />
-    <Compile Include="Repositories\IDepartmentRepository.cs" />
-    <Compile Include="Repositories\IEmployeeRepository.cs" />
+    <Compile Include="Repositories\UserMasterRepository.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap-grid.css.map" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap-reboot.css.map" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap-utilities.css.map" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap-utilities.min.css.map" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap.css.map" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap.min.css.map" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap.rtl.css.map" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\css\bootstrap.rtl.min.css.map" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\js\bootstrap.bundle.js.map" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\js\bootstrap.esm.js.map" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\js\bootstrap.esm.min.js.map" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\js\bootstrap.js.map" />
+    <Content Include="bootstrap-5.0.0-beta3-dist\js\bootstrap.min.js.map" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

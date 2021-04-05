@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using WebApi_Training_Playground_Day03.Data;
 using WebApi_Training_Playground_Day03.Models;
@@ -62,5 +63,18 @@ namespace WebApi_Training_Playground_Day03.Repositories
 
 			return false;
 		}
+	}
+
+	public interface IEmployeeRepository
+	{
+		IEnumerable<Employee> GetEmployees();
+
+		Employee GetEmployee(int employeeId);
+
+		Employee AddEmployee(Employee employee);
+
+		Employee UpdateEmployee(Employee employee);
+
+		bool DeleteEmployee(int employeeId);
 	}
 }
