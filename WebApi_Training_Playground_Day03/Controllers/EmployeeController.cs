@@ -20,6 +20,7 @@ namespace WebApi_Training_Playground_Day03.Controllers
 		}
 
 		// GET: Employee
+		[Authorize(Roles = "SuperAdmin, Admin, User")]
 		public IHttpActionResult GetEmployees()
 		{
 			IEnumerable<Employee> employees = null;
@@ -34,9 +35,10 @@ namespace WebApi_Training_Playground_Day03.Controllers
 			return Ok(employees);
 		}
 
-		
+
 
 		// GET: Employee
+		[Authorize(Roles = "SuperAdmin, Admin, User")]
 		public IHttpActionResult GetEmployee(int id)
 		{
 			Employee employee = null;
@@ -50,6 +52,7 @@ namespace WebApi_Training_Playground_Day03.Controllers
 			return Ok(employee);
 		}
 
+		[Authorize(Roles = "SuperAdmin, Admin")]
 		public IHttpActionResult PostEmployee([FromBody]Employee employee)
 		{
 			if (!ModelState.IsValid)
@@ -60,6 +63,7 @@ namespace WebApi_Training_Playground_Day03.Controllers
 			return Ok(employee);
 		}
 
+		[Authorize(Roles = "SuperAdmin, Admin")]
 		public IHttpActionResult PutEmployee(Employee employee)
 		{
 			if (!ModelState.IsValid)
@@ -70,6 +74,7 @@ namespace WebApi_Training_Playground_Day03.Controllers
 			return Ok(employee);
 		}
 
+		[Authorize(Roles = "SuperAdmin")]
 		public IHttpActionResult DeleteEmployee(int id)
 		{
 			if (id <= 0)

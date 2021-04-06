@@ -9,11 +9,11 @@ using WebApi_Training_Playground_Day03.Repositories;
 
 namespace WebApi_Training_Playground_Day03.Auth
 {
-	public class AuthenticationProvider : OAuthAuthorizationServerProvider
+	public class AuthorizationServerProvider : OAuthAuthorizationServerProvider
 	{
 		private readonly IUserMasterRepository userMasterRepository;
 
-		public AuthenticationProvider()
+		public AuthorizationServerProvider()
 		{
 			userMasterRepository = new UserMasterRepository();
 		}

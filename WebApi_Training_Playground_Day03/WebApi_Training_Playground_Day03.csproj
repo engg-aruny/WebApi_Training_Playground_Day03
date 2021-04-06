@@ -139,7 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Auth\AuthenticationProvider.cs" />
+    <Compile Include="Auth\AuthorizationServerProvider.cs" />
     <Compile Include="Controllers\AuthTestController.cs" />
     <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />

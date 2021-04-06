@@ -27,8 +27,8 @@ namespace WebApi_Training_Playground_Day03
 				//Setting the Token Expired Time (24 hours)
 				AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),
 
-				//MyAuthorizationServerProvider class will validate the user credentials
-				Provider = new AuthenticationProvider()
+				//AuthorizationServerProvider class will validate the user credentials
+				Provider = new AuthorizationServerProvider()
 			};
 
 
