@@ -9,7 +9,7 @@ namespace WebApi_Training_Playground_Day03.Models
 		[Key]
 	    public int Id { get; set; }
 
-	    public int Name { get; set; }
+	    public string Name { get; set; }
 
 	    public string Location { get; set; }
     }

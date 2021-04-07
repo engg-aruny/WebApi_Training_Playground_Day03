@@ -10,6 +10,8 @@ namespace WebApi_Training_Playground_Day03
 		{
 			// Web API configuration and services
 
+			UnityConfig.RegisterComponents();
+
 			// Web API routes
 			config.MapHttpAttributeRoutes();
 

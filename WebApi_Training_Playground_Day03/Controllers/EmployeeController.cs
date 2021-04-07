@@ -12,8 +12,6 @@ namespace WebApi_Training_Playground_Day03.Controllers
 	{
 		private readonly IEmployeeRepository _employeeRepository;
 
-	
-
 		public EmployeeController()
 		{
 			this._employeeRepository = new EmployeeRepository(new WebApiTrainingDbContext());
