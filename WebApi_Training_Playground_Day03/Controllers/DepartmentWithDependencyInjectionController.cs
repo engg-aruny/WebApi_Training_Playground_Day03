@@ -10,11 +10,11 @@ using WebApi_Training_Playground_Day03.Repositories;
 namespace WebApi_Training_Playground_Day03.Controllers
 {
 	[Route("api/DepartmentDep")]
-    public class DepartmentControllerWithDependencyInjectionController: ApiController
+    public class DepartmentWithDependencyInjectionController: ApiController
     {
 		private readonly IDepartmentRepository _departmentRepository;
 
-		public DepartmentControllerWithDependencyInjectionController(IDepartmentRepository departmentRepository)
+		public DepartmentWithDependencyInjectionController(IDepartmentRepository departmentRepository)
 	    {
 		    this._departmentRepository = departmentRepository;
 	    }

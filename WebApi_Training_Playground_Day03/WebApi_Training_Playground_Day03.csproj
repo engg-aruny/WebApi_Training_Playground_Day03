@@ -156,7 +156,7 @@
     <Compile Include="Controllers\AuthTestController.cs" />
     <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
-    <Compile Include="Controllers\DepartmentControllerWithDependencyInjectionController.cs" />
+    <Compile Include="Controllers\DepartmentWithDependencyInjectionController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
